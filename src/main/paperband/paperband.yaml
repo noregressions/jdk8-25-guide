@@ -3,12 +3,9 @@
 
 title: "The JDK 8 to JDK 25 Migration Guide"
 
-# "classical" is the plainest of the bundled themes (cream paper, serif body,
-# hairline rules, no colour gimmicks) - a good match for a straight reference
-# guide. Swap for any of: editorial, fieldguide, dark, blueprint, carded, herodevs.
-# `pagewright themes` lists them all; --theme on the CLI always overrides this.
 theme: classical
 
+cover: ../resources/images/cover.png
 vars:
-  subtitle: "A practitioner's guide to the largest change in the Java platform's history"
+  subtitle: "A practitioner's guide to migrating from JDK 8 to JDK 25"
   author: "Steve Poole"
