@@ -1,12 +1,6 @@
 # 16 — Security paths silently succeed
 
-| | |
-|---|---|
-| **Category** | Runs But Wrong (silent behaviour change) |
-| **Introduced** | JDK 24 (JEP 486) |
-| **Symptom** | `doPrivileged()` executes with no checks; `getSecurityManager()` always returns `null`; code expecting `SecurityException` to block an operation never sees it |
-| **Detect** | Search for `catch (SecurityException`, `doPrivileged()`, `checkPermission()`, `getSecurityManager() != null` guards |
-| **Fix** | Replace with OS-level sandboxing, container security policies, or application-level authorisation. This is a manual audit — there's no tool that finds "a security check that used to fire and now doesn't." |
+**Full details:** [Chapter 3.16 — Security Paths Silently Succeed](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.16-security-checks-silently-succeed.md)
 
 ## What this test does — the "runs but wrong" sibling of test 08
 

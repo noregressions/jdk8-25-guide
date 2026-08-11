@@ -1,12 +1,6 @@
 # 17 — CLDR locale data becomes default
 
-| | |
-|---|---|
-| **Category** | Runs But Wrong (silent behaviour change) |
-| **Introduced** | JDK 9 (JEP 252) |
-| **Symptom** | Formatted dates, currencies, numbers, and era names change silently — hits stored formatted output (report filenames, invoices, log timestamps) hardest |
-| **Detect** | Run locale-sensitive tests on both JDKs, diff the output |
-| **Fix** | Stop asserting on exact formatted strings; use structured date/time types and format only at the display boundary. `-Djava.locale.providers=COMPAT,CLDR` is the temporary bridge, not the fix. |
+**Full details:** [Chapter 3.17 — CLDR Locale Data Becomes the Default](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.17-cldr-locale-data-default.md)
 
 ## What this test does — and how the pass/fail check avoids the transport bug
 

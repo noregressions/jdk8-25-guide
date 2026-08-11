@@ -1,13 +1,6 @@
 # 31 — Nestmate access — "the one that helps"
 
-| | |
-|---|---|
-| **Category** | Recompilation Surprises |
-| **Introduced** | JDK 11 (JEP 181) |
-| **Symptom** | Recompiling replaces synthetic `access$000` bridge methods with `NestHost`/`NestMembers` attributes: cleaner stack traces, identical behaviour |
-| **Detect** | `javap -c -v` — look for `NestHost`/`NestMembers` |
-| **Fix** | None needed. Flagged here because the disappearing synthetic members are one of the mechanisms that can shift a computed `serialVersionUID` (item 25). |
-| **Finding (not yet reflected in the reference doc)** | The doc's Symptom line says "smaller class files." For this test's class, the opposite happened — see below. Worth softening to "different class shape" rather than asserting a size direction, since the `NestHost`/`NestMembers` constant-pool entries and attributes have their own overhead that doesn't automatically net out smaller for every class, especially small ones with only one or two cross-nest accesses. |
+**Full details:** [Chapter 3.31 — Nestmate Access — the One That Helps](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.31-nestmate-access.md)
 
 ## What this test does
 

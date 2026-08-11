@@ -1,13 +1,6 @@
 # 27 — `java.lang.IO` and `java.lang.Record` collisions
 
-| | |
-|---|---|
-| **Category** | Recompilation Surprises |
-| **Introduced** | `java.lang.IO`: JDK 25 (JEP 512). `java.lang.Record`: JDK 16 (JEP 395 — Records) |
-| **Throws** | Ambiguous-reference compile error on recompilation |
-| **Detect** | Compile against the target JDK — it names both candidate classes |
-| **Fix** | Rename the class, or use an explicit single-type import to disambiguate. |
-| **Correction** | Narrower than "any class named `IO` breaks": it only bites when the name is reached via a **wildcard import** from another package. Same-package references and explicit single-type imports still resolve correctly. `java.lang.Record` caused the identical breakage wave a JDK cycle earlier — worth treating as one pattern, not two unrelated incidents. |
+**Full details:** [Chapter 3.27 — java.lang.IO and java.lang.Record Collisions](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.27-java-lang-io-record-collision.md)
 
 ## What this test does
 

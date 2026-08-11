@@ -1,13 +1,6 @@
 # 14 — `sun.misc.Unsafe` memory-access methods
 
-| | |
-|---|---|
-| **Category** | Crashes at Runtime (future) |
-| **Introduced** | Deprecated for removal JDK 23 (JEP 471); **warnings began JDK 24** (JEP 498) |
-| **Throws** | Warning today; `UnsupportedOperationException` expected in a future release |
-| **Detect** | `--sun-misc-unsafe-memory-access=debug` on the test suite; `=deny` in CI to simulate the future default; `jdeps --jdk-internals` |
-| **Fix** | Migrate to `VarHandle` or the Foreign Function & Memory API. Usage is almost always in a dependency (Guava, Maven, JavaFX, OpenTelemetry), not your own code. |
-| **Correction** | The deck's slide says "Runtime warnings (JDK 25)." The written series (`nineteen-ways`) already has this right — JEP 498 is JDK 24. Fix the deck to match the article. |
+**Full details:** [Chapter 3.14 — sun.misc.Unsafe Memory-Access Methods](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.14-unsafe-memory-access.md)
 
 ## What this test does
 

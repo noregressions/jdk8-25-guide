@@ -1,12 +1,6 @@
 # 33 — Distribution changes
 
-| | |
-|---|---|
-| **Category** | Environment, distribution & build toolchain |
-| **Introduced** | Standalone JRE / Web Start: JDK 11 (packaging change). JavaFX unbundled: JDK 11 (became the separate OpenJFX project). Applet API: JDK 17 (JEP 398 — deprecated for removal) |
-| **Symptom** | Nothing to launch via Web Start; no JRE to bundle; JavaFX apps need explicit OpenJFX dependencies; applets have no future |
-| **Detect** | Inventory anything launched via JRE-only distribution, Web Start, JavaFX, or applets |
-| **Fix** | `jlink` for a custom minimal runtime image; add OpenJFX Maven/Gradle dependencies explicitly; retire applets. |
+**Full details:** [Chapter 3.33 — Distribution Changes: JRE, Web Start, JavaFX, Applets](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.33-distribution-changes.md)
 
 ## What this test does — and an honest vendor caveat found while building it
 

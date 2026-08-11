@@ -1,12 +1,6 @@
 # 06 — Removed Java EE packages
 
-| | |
-|---|---|
-| **Category** | Crashes at Runtime |
-| **Introduced** | JDK 11 (JEP 320) |
-| **Throws** | `NoClassDefFoundError`, `ClassNotFoundException` |
-| **Detect** | `jdeprscan --for-removal`; compile against JDK 11+ |
-| **Fix** | Add Jakarta EE coordinates explicitly (`jakarta.xml.bind-api`, etc.) — the classes were removed, not renamed automatically. |
+**Full details:** [Chapter 3.6 — Removed Java EE Packages](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.06-removed-java-ee-packages.md)
 
 ## What this test does
 

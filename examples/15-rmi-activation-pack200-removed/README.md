@@ -1,13 +1,6 @@
 # 15 — RMI Activation and Pack200 removed
 
-| | |
-|---|---|
-| **Category** | Crashes at Runtime |
-| **Introduced** | RMI Activation: JDK 17 (JEP 407). Pack200: JDK 14 (JEP 367) |
-| **Throws** | `NoClassDefFoundError` |
-| **Detect** | `jdeps`; search for `java.rmi.activation`, `java.util.jar.Pack200` |
-| **Fix** | Remove the dependency — both were long-unmaintained corners of the platform with no direct replacement API. |
-| **Not in the deck.** |
+**Full details:** [Chapter 3.15 — RMI Activation and Pack200 Removed](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.15-rmi-activation-pack200-removed.md)
 
 ## What this test does
 

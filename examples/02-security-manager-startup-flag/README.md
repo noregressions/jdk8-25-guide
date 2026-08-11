@@ -1,12 +1,6 @@
 # 02 — Security Manager startup flags
 
-| | |
-|---|---|
-| **Category** | Won't Start |
-| **Introduced** | Unconditional since JDK 24 (JEP 486). Note: JDK 18-23 already throw at the *call site* if code invokes `System.setSecurityManager()` without `-Djava.security.manager=allow` — see test 08 — but the *startup flag* itself (`-Djava.security.manager` on the command line, no value or `=allow`/`=disallow`/a classname) is only VM-init-fatal from 24 onward. |
-| **Throws** | `Error occurred during initialization of VM` — the JVM exits before `main()` runs |
-| **Detect** | Audit startup scripts and Docker entrypoints for `-Djava.security.manager` |
-| **Fix** | Remove the flag entirely. There is no replacement — the Security Manager is gone. |
+**Full details:** [Chapter 3.2 — Security Manager Startup Flags](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.02-security-manager-startup-flags.md)
 
 ## What this test does
 

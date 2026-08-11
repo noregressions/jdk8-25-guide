@@ -1,12 +1,6 @@
 # 01 — Obsolete GC flags
 
-| | |
-|---|---|
-| **Category** | Won't Start |
-| **Introduced** | CMS removed JDK 14 (JEP 363); PermGen flag rejected ~JDK 15 |
-| **Throws** | `Unrecognized VM option` — JVM exits immediately, before `main()` |
-| **Detect** | `-XX:+PrintFlagsFinal` diff between current and target JDK |
-| **Fix** | Remove `-XX:+UseConcMarkSweepGC` (and the other CMS/PermGen flags) from every startup script; use G1/ZGC and `-XX:MaxMetaspaceSize`. |
+**Full details:** [Chapter 3.1 — Obsolete GC Flags](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.01-obsolete-gc-flags.md)
 
 ## What this test does
 

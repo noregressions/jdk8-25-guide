@@ -1,13 +1,6 @@
 # 30 — Stricter `javac` breaks `-Werror` builds
 
-| | |
-|---|---|
-| **Category** | Recompilation Surprises |
-| **Introduced** | Cumulative across 17 releases — no single JEP. Notable individual contributors: `this-escape` warning (JDK 21) |
-| **Symptom** | New lint/deprecation/removal warnings accumulate release over release; a build with `-Werror` fails on recompile even when the code is functionally fine |
-| **Detect** | Trial-compile against the target JDK; triage the new warnings before deciding what `-Werror` should actually cover |
-| **Fix** | Fix or explicitly suppress each new warning category; don't blanket-disable `-Werror`. |
-| **Not in the deck.** |
+**Full details:** [Chapter 3.30 — Stricter javac Breaks -Werror Builds](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.30-stricter-javac-werror.md)
 
 ## What this test does
 

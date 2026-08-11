@@ -1,12 +1,6 @@
 # 19 — Default GC changed Parallel → G1
 
-| | |
-|---|---|
-| **Category** | Runs But Wrong (silent behaviour change) |
-| **Introduced** | JDK 9 (JEP 248) |
-| **Symptom** | Different pause characteristics, throughput, and memory footprint under load — no error, just different numbers |
-| **Detect** | JFR recordings comparing GC pause distributions between old and new JDK; or just `-XX:+PrintCommandLineFlags -version`, which is what this test does |
-| **Fix** | Re-profile and re-tune under G1 (or explicitly select ZGC/Shenandoah); don't trust JDK 8 performance baselines. |
+**Full details:** [Chapter 3.19 — The Default Garbage Collector Changed](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.19-default-gc-parallel-to-g1.md)
 
 ## What this test does — and its limit
 

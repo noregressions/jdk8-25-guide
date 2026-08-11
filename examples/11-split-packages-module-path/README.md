@@ -1,12 +1,6 @@
 # 11 — Split packages on the module path
 
-| | |
-|---|---|
-| **Category** | Crashes at Runtime |
-| **Introduced** | JDK 9 (JEP 261) |
-| **Throws** | `LayerInstantiationException` at startup — module path only, never the classpath |
-| **Detect** | `jdeps` overlapping-package report; trial module-path run |
-| **Fix** | Stay on the classpath (still fully supported on JDK 25), or resolve the duplicate package. |
+**Full details:** [Chapter 3.11 — Split Packages on the Module Path](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.11-split-packages-module-path.md)
 
 ## What this test does — and why there's no JDK 8 side
 

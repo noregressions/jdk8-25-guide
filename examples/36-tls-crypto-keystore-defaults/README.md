@@ -1,13 +1,6 @@
 # 36 — TLS/crypto posture tightened
 
-| | |
-|---|---|
-| **Category** | Environment, distribution & build toolchain |
-| **Introduced** | ⚠ Cumulative across releases — no single JEP; enforced via `jdk.tls.disabledAlgorithms` and related security properties, updated nearly every release |
-| **Symptom** | TLS 1.0/1.1 disabled by default; SHA-1-signed JARs treated as unsigned; default keystore type JKS → PKCS12 (JDK 9); connections to legacy endpoints fail with `SSLHandshakeException` |
-| **Detect** | Integration-test against every external and legacy internal endpoint; audit keystores and signed JARs |
-| **Fix** | Upgrade the endpoint's TLS config; re-sign JARs with SHA-256+; migrate keystores to PKCS12 explicitly. |
-| **Not in the deck.** |
+**Full details:** [Chapter 3.36 — TLS and Crypto Posture Tightened](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.36-tls-crypto-defaults.md)
 
 ## What this test does — and why it only asserts on one sub-claim
 

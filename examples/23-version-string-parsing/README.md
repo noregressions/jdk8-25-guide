@@ -1,13 +1,6 @@
 # 23 — Version-string parsing breaks
 
-| | |
-|---|---|
-| **Category** | Runs But Wrong (silent behaviour change) |
-| **Introduced** | JDK 9 (JEP 223 — Version-String Scheme) |
-| **Symptom** | `java.version` went from `1.8.0_292`-style to plain `25`; code doing `version.startsWith("1.")` or `substring(2, 3)` silently misdetects the platform and takes the wrong branch |
-| **Detect** | Search for `java.version` reads and hand-rolled version-parsing logic |
-| **Fix** | `Runtime.version()`, which returns a structured `Runtime.Version` object. |
-| **Not in the deck.** |
+**Full details:** [Chapter 3.23 — Version-String Parsing Breaks](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.23-version-string-parsing.md)
 
 ## What this test does
 

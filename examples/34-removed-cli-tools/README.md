@@ -1,12 +1,6 @@
 # 34 — Removed CLI tools
 
-| | |
-|---|---|
-| **Category** | Environment, distribution & build toolchain |
-| **Introduced** | ⚠ Version-only, several without individually numbered JEPs: `javah` (JDK 10), `jhat` (JDK 9), `rmic` (JDK 15), `wsimport`/`wsgen`/`schemagen` (JDK 11, alongside Java EE removal), `pack200`/`unpack200` (JDK 14, JEP 367) |
-| **Symptom** | Build step invoking the tool fails outright |
-| **Detect** | Grep build scripts and CI pipelines for each tool name |
-| **Fix** | `javah` → annotation processing / `javac -h`; `rmic` → dynamic stub generation (built into RMI since JDK 8); `wsimport`/`wsgen` → the JAX-WS reference implementation as an external dependency. |
+**Full details:** [Chapter 3.34 — Removed CLI Tools](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.34-removed-cli-tools.md)
 
 ## What this test does
 

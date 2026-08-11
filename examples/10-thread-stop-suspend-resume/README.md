@@ -1,13 +1,6 @@
 # 10 — `Thread.stop()` / `suspend()` / `resume()` throw
 
-| | |
-|---|---|
-| **Category** | Crashes at Runtime |
-| **Introduced** | ⚠ JDK 20 (no dedicated JEP — implementation change to long-deprecated methods, distinct from the `ThreadGroup` item, test 21) |
-| **Throws** | `UnsupportedOperationException` |
-| **Detect** | `jdeprscan --for-removal`; search for `.stop()`/`.suspend()`/`.resume()` on `Thread` |
-| **Fix** | Interruption + cooperative cancellation (`Thread.interrupt()`, a shared `volatile` flag, or `ExecutorService.shutdown()`). |
-| **Not in the deck** — which only covers the `ThreadGroup`-level siblings of these same methods, a separate API surface (see test 21). |
+**Full details:** [Chapter 3.10 — Thread.stop(), suspend() and resume() Throw](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.10-thread-stop-suspend-resume.md)
 
 ## What this test does
 

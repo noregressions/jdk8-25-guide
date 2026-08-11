@@ -1,13 +1,6 @@
 # 38 — Headless font rendering
 
-| | |
-|---|---|
-| **Category** | Environment, distribution & build toolchain |
-| **Introduced** | N/A — a packaging/infrastructure gap, not a JDK version change |
-| **Symptom** | Minimal Linux/Docker base images lack `fontconfig` and fonts; AWT text rendering throws `NullPointerException` or `InternalError`; PDF/chart/report generation breaks |
-| **Detect** | Run report-generation code paths inside the real target container image, not just locally |
-| **Fix** | Install `fontconfig` and a base font package in the image (e.g. `fontconfig` + `dejavu-fonts` on most minimal Linux bases). |
-| **Not in the deck.** |
+**Full details:** [Chapter 3.38 — Headless Font Rendering](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.38-headless-font-rendering.md)
 
 ## Status: SKIP (exit code 2) — and why that's the honest result here
 

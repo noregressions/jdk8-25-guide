@@ -1,13 +1,6 @@
 # 04 — Extension and endorsed-standards mechanisms removed
 
-| | |
-|---|---|
-| **Category** | Won't Start |
-| **Introduced** | JDK 9 (JEP 220 — Modular Run-Time Images) |
-| **Throws** | Startup failure — `Error: Could not create the Java Virtual Machine.` |
-| **Detect** | Grep startup scripts and wrapper configs for `ext.dirs`, `endorsed`, `Xbootclasspath` |
-| **Fix** | Put the JAR on the classpath/module path directly; there is no endorsed-override mechanism any more. |
-| **Not in the deck.** These flags hide in ancient app-server launch scripts (Tomcat, WebLogic, WebSphere-era configs) and rarely get audited because nobody expects them to still be there. |
+**Full details:** [Chapter 3.4 — Extension and Endorsed-Standards Mechanisms Removed](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.04-ext-endorsed-dirs-removed.md)
 
 ## What this test does
 

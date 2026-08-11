@@ -1,13 +1,6 @@
 # 09 — System classloader is no longer a `URLClassLoader`
 
-| | |
-|---|---|
-| **Category** | Crashes at Runtime |
-| **Introduced** | JDK 9 (JEP 261 — Module System; `AppClassLoader` now extends `BuiltinClassLoader`) |
-| **Throws** | `ClassCastException` |
-| **Detect** | Search for `(URLClassLoader)` casts on `getSystemClassLoader()` / `getContextClassLoader()` |
-| **Fix** | Use the `java.class.path` system property, `ServiceLoader`, or construct an explicit child `URLClassLoader` instead of casting the system one. |
-| **Not in the deck.** One of the most common real-world JDK 9+ failures — classpath scanners, plugin loaders, and "add a JAR at runtime" hacks did this cast routinely. |
+**Full details:** [Chapter 3.9 — The System Classloader Is No Longer a URLClassLoader](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.09-system-classloader-not-urlclassloader.md)
 
 ## What this test does
 

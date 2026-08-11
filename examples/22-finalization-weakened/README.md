@@ -1,14 +1,6 @@
 # 22 — Finalisation weakened
 
-| | |
-|---|---|
-| **Category** | Runs But Wrong (silent, deferred risk) |
-| **Introduced** | Deprecated JDK 9; **deprecated for removal JDK 18** (JEP 421) |
-| **Symptom** | Resources not cleaned up, or cleaned up at unpredictable times |
-| **Detect** | Search for `finalize()` overrides; run with `--finalization=disabled` to test for a hidden dependency |
-| **Fix** | `try-with-resources` for deterministic cleanup; `Cleaner` for background cleanup of resources that can't use try-with-resources. |
-| **Correction** | The deck's `jdeprscan` sample output shows `finalize()V (forRemoval=true since 9)`. That's wrong — JEP 421 (forRemoval) is JDK 18, not 9. |
-| **Finding (not yet reflected in the reference doc)** | The reference doc's own "Detect" column names the flag `-Dfinalization=disabled` — a `-D` system property. That's wrong syntax: the real flag is `--finalization=disabled`, a launcher option (double-dash, no `-D`). Verified below: the `-D` form has zero effect; the `--` form actually disables finalization. |
+**Full details:** [Chapter 3.22 — Finalisation Weakened](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.22-finalisation-weakened.md)
 
 ## What this test does — and why it doesn't try to prove "unpredictable timing"
 

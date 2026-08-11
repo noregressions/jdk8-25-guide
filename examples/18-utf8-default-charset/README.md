@@ -1,12 +1,6 @@
 # 18 — UTF-8 becomes default charset
 
-| | |
-|---|---|
-| **Category** | Runs But Wrong (silent behaviour change) |
-| **Introduced** | JDK 18 (JEP 400) |
-| **Symptom** | Silent file misinterpretation across a JDK 8 → 25 migration when code doesn't specify a charset — worst for files that already existed on disk before the migration |
-| **Detect** | Search for `FileReader`, `FileWriter`, `InputStreamReader`, `OutputStreamWriter` without an explicit charset argument |
-| **Fix** | Specify `StandardCharsets.UTF_8` (or whatever charset the data actually is) explicitly on every call site. `-Dfile.encoding=COMPAT` is the temporary bridge, not the fix. |
+**Full details:** [Chapter 3.18 — UTF-8 Becomes the Default Charset](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.18-utf8-default-charset.md)
 
 ## What this test does — and why it's two files, not one
 

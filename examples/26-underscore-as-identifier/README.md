@@ -1,12 +1,6 @@
 # 26 — Underscore as identifier
 
-| | |
-|---|---|
-| **Category** | Recompilation Surprise |
-| **Introduced** | JDK 9 (JEP 213 — `_` reserved as a keyword); JDK 21/22 (JEP 456 — repurposed as the unnamed variable) |
-| **Throws** | Compile error: `underscore not allowed here` / `as of release 9, '_' is a keyword` |
-| **Detect** | Recompile against the target JDK — the compiler tells you immediately |
-| **Fix** | Rename the identifier. |
+**Full details:** [Chapter 3.26 — Underscore as an Identifier](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.26-underscore-as-identifier.md)
 
 ## What this test does
 

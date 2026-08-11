@@ -1,13 +1,6 @@
 # 35 — Build toolchain minimums
 
-| | |
-|---|---|
-| **Category** | Environment, distribution & build toolchain |
-| **Introduced** | N/A — not a JDK behaviour change, but a compatibility-matrix problem across the ecosystem |
-| **Symptom** | Maven compiler/surefire plugin, Gradle, Kotlin/Groovy/Scala compilers, and ASM-based plugins (JaCoCo etc.) can all fail against JDK 25 class files independently of anything your own code does — same root cause as item 12 |
-| **Detect** | Check each tool's JDK 25 support matrix before cutting the migration branch |
-| **Fix** | Upgrade the toolchain first, as a separate, lower-risk step before the JDK upgrade itself. |
-| **Not in the deck.** |
+**Full details:** [Chapter 3.35 — Build Toolchain Minimums](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.35-build-toolchain-minimums.md)
 
 ## What this test does — real ASM, one concrete instance of the pattern
 

@@ -1,12 +1,6 @@
 # 13 — Native access without `--enable-native-access`
 
-| | |
-|---|---|
-| **Category** | Crashes at Runtime (future) |
-| **Introduced** | JDK 22 (JEP 454 — FFM API; JEP 472 — restrict JNI) |
-| **Throws** | Warning on JDK 25; a hard error on a future release |
-| **Detect** | `jnativescan --class-path 'libs/*'` |
-| **Fix** | `--enable-native-access=ALL-UNNAMED` or the specific module name. |
+**Full details:** [Chapter 3.13 — Native Access Without --enable-native-access](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.13-native-access-warning.md)
 
 ## What this test does — and its limit
 

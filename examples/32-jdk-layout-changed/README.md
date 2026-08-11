@@ -1,12 +1,6 @@
 # 32 — JDK layout changed
 
-| | |
-|---|---|
-| **Category** | Environment, distribution & build toolchain |
-| **Introduced** | JDK 9 (JEP 220 — Modular Run-Time Images) |
-| **Symptom** | `rt.jar`, `tools.jar`, and the `jre/` directory no longer exist |
-| **Detect** | Grep build scripts and code for `rt.jar`, `tools.jar`, `/jre/` |
-| **Fix** | Use the `ToolProvider` / `javax.tools` APIs instead of loading `tools.jar` directly; drop any `$JAVA_HOME/jre/...` path assumptions. |
+**Full details:** [Chapter 3.32 — The JDK Layout Changed](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.32-jdk-layout-changed.md)
 
 ## What this test does
 

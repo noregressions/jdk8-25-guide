@@ -1,13 +1,6 @@
 # 03 — Obsolete GC logging flags
 
-| | |
-|---|---|
-| **Category** | Won't Start (mostly) |
-| **Introduced** | JDK 9 unified logging (JEP 158/271) |
-| **Symptom** | Mixed — see finding below. `-XX:+PrintGCTimeStamps` and most of the `PrintGC*` family are startup-fatal on JDK 25. `-XX:+PrintGCDetails` and `-verbose:gc` are **not** fatal — both are kept as deprecated, working aliases that translate to `-Xlog:gc*` under the hood. |
-| **Detect** | Audit startup scripts for `-XX:+PrintGC*`; trial-run each specific flag against the target JDK rather than assuming the whole family behaves the same |
-| **Fix** | Migrate to `-Xlog:gc*:file=gc.log:time,uptime,level,tags` regardless of which flags currently "work" — even the surviving aliases produce the *new* unified-logging output format, so anything parsing the old text format still breaks. |
-| **Finding (not yet reflected in the reference doc)** | The reference doc's item #3 already corrects the deck's claim about `-verbose:gc` (not fatal) but still groups `-XX:+PrintGCDetails` with the fatal `PrintGC*` family. Empirically, `-XX:+PrintGCDetails` is **also** a kept, working, deprecated alias on JDK 25 — same treatment as `-verbose:gc`, not the same treatment as `-XX:+PrintGCTimeStamps`. Worth a follow-up edit to the reference doc: the fatal/non-fatal line doesn't run along "PrintGCDetails + friends vs. verbose:gc" — it runs along which *specific* flag you pick. |
+**Full details:** [Chapter 3.3 — Obsolete GC Logging Flags](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.03-obsolete-gc-logging-flags.md)
 
 ## What this test does
 

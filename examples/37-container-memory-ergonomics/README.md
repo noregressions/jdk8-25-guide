@@ -1,13 +1,6 @@
 # 37 — Container memory ergonomics changed
 
-| | |
-|---|---|
-| **Category** | Environment, distribution & build toolchain |
-| **Introduced** | ⚠ JDK 10 container-aware ergonomics (backported to 8u191) — not a numbered JEP |
-| **Symptom** | Percentage-based heap defaults behave differently from JDK 8-era assumptions, especially against pre-8u191 images; pods may get different heap sizes or different OOMKill behaviour with unchanged, `-Xmx`-less configs |
-| **Detect** | Run `-XX:+PrintFlagsFinal` inside the actual target container and compare against the JDK 8 container's effective values |
-| **Fix** | Re-baseline heap settings explicitly rather than relying on ergonomic defaults matching your old assumptions. |
-| **Not in the deck.** |
+**Full details:** [Chapter 3.37 — Container Memory Ergonomics](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.37-container-memory-ergonomics.md)
 
 ## What this test does — no Docker daemon needed, and an important negative result
 

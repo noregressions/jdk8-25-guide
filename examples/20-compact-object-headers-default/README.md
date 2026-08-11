@@ -1,13 +1,6 @@
 # 20 — Compact object headers break cached field offsets
 
-| | |
-|---|---|
-| **Category** | Runs But Wrong (silent behaviour change) |
-| **Introduced** | JDK 25 (JEP 519) |
-| **Symptom** | Garbage data, heap corruption, delayed crashes — *only if the feature is enabled* |
-| **Detect** | Run the test suite with `-XX:+UseCompactObjectHeaders` on plus `--sun-misc-unsafe-memory-access=debug`; search for `objectFieldOffset` |
-| **Fix** | Migrate cached-offset code to `VarHandle`, which recomputes correctly regardless of header layout. |
-| **Correction** | This is `-XX:+UseCompactObjectHeaders`, a **product option in JDK 25, default OFF**. The deck's `PrintFlagsFinal` slide shows it as `true ← JDK 25 new`, which is wrong for the shipped default; `guide.pdf` Chapter 1.5 contradicts itself on this exact point. |
+**Full details:** [Chapter 3.20 — Compact Object Headers Break Cached Field Offsets](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.20-compact-object-headers.md)
 
 ## What this test does — and its limit
 

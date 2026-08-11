@@ -1,12 +1,6 @@
 # 25 — Serialisation drift
 
-| | |
-|---|---|
-| **Category** | Recompilation Surprises |
-| **Introduced** | ⚠ No single JEP — side effect of internal implementation changes (including the nestmate change, test 31) altering the computed `serialVersionUID` |
-| **Throws** | `InvalidClassException` on deserialisation |
-| **Detect** | Search for `Serializable` classes without an explicit `serialVersionUID`; the `serialver` tool |
-| **Fix** | Declare `serialVersionUID` explicitly on every `Serializable` class. Better: move off Java's built-in serialisation entirely (JSON, Protobuf, Avro). |
+**Full details:** [Chapter 3.25 — Serialisation Drift](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.25-serialisation-drift.md)
 
 ## What this test does
 

@@ -3,9 +3,30 @@
 
 title: "The JDK 8 to JDK 25 Migration Guide"
 
-theme: classical
+theme: editorial-gold
 
 cover: ../resources/images/cover.png
 vars:
   subtitle: "A practitioner's guide to migrating from JDK 8 to JDK 25"
   author: "Steve Poole"
+  # editorial-gold's background needs to reach the physical page edge on the
+  # left/right, and Chromium's PDF renderer margin option leaves a literal
+  # unpainted border no CSS can paint through there -- so left/right stay
+  # zero here and the theme's own print padding (see theme.css) fakes that
+  # margin instead. Top/bottom stay real renderer margins on purpose: CSS
+  # padding on body only actually shows at the very top of page 1 and the
+  # very bottom of the last page (a page-broken flow's padding is a one-time
+  # effect at the ends of the whole box, not a per-page thing), so faking
+  # top/bottom the same way as left/right left every interior page with a
+  # 0mm top/bottom margin. A renderer margin genuinely repeats every page.
+  page:
+    margins: { top: 20, right: 0, bottom: 20, left: 0 }
+
+# Running header/footer bands, rendered by Chromium's Page.pdf() header/
+# footer option (see HtmlInput.headerHtml/footerHtml) -- self-contained
+# templates, inline styles only, no access to the theme's stylesheet, which
+# is why colours below are literal hex rather than the theme's CSS vars.
+header:
+  template: layouts/header.html
+footer:
+  template: layouts/footer.html

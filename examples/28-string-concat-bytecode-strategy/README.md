@@ -1,11 +1,6 @@
 # 28 — String concatenation: bytecode strategy changed, evaluation order did not
 
-| | |
-|---|---|
-| **Category** | Recompilation Surprises |
-| **Introduced** | JDK 9 (JEP 280 — `invokedynamic`-based concatenation) |
-| **Reference doc's current claim** | "If a `toString()` argument has side effects, evaluation order can differ between the old `StringBuilder`-chain bytecode and the new `invokedynamic` bytecode — only on recompiled code." |
-| **This test's finding** | ⚠ **The evaluation-order claim does not reproduce.** What genuinely changes is the bytecode *strategy* (`StringBuilder` chain → `invokedynamic`/`makeConcatWithConstants`) — not the order operands are evaluated in, which the JLS pins to left-to-right regardless of how the compiler implements the concatenation underneath. |
+**Full details:** [Chapter 3.28 — String Concatenation: the Bytecode Changes, the Behaviour Doesn't](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.28-string-concat-bytecode.md)
 
 ## Why this test exists — closing the loop from the pilot
 

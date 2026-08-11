@@ -1,13 +1,6 @@
 # 08 — `System.setSecurityManager()`
 
-| | |
-|---|---|
-| **Category** | Crashes at Runtime |
-| **Introduced** | Default-disallowed since JDK 18 (JEP 411 groundwork); `-Djava.security.manager=allow` opt-out available through JDK 23; unconditional since JDK 24 (JEP 486) |
-| **Throws** | `UnsupportedOperationException` (default, JDK 18+); VM-init failure instead, same as test 02, if you also try the `=allow` opt-out on JDK 24+ |
-| **Detect** | `jdeprscan`; search for `setSecurityManager` |
-| **Fix** | None. The mechanism is gone — remove the calling code and replace with an application-level or OS/container-level enforcement mechanism. |
-| **Correction** | The deck and `nineteen-ways-jdk8-breaks-on-jdk25.md` both cite this as "Since JDK 24." That's the point it became *unconditional* — but teams targeting JDK 18–23 hit the same exception six releases earlier unless they explicitly pass `-Djava.security.manager=allow`. |
+**Full details:** [Chapter 3.8 — System.setSecurityManager() Throws](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.08-setsecuritymanager-throws.md)
 
 ## What this test does — and its limits
 

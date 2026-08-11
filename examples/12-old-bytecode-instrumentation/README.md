@@ -1,12 +1,6 @@
 # 12 — Old bytecode instrumentation libraries
 
-| | |
-|---|---|
-| **Category** | Crashes at Runtime |
-| **Introduced** | Every JDK release increments the class file major version; JDK 25 = 69 |
-| **Throws** | `IllegalArgumentException: Unsupported class file major version 69`, or a bare `UnsupportedClassVersionError` |
-| **Detect** | Check ASM/ByteBuddy versions across the **full transitive** dependency tree |
-| **Fix** | ASM 9.8+, ByteBuddy 1.17.5+ (⚠ verify against each library's own release notes for your exact target), Mockito 5.x+. |
+**Full details:** [Chapter 3.12 — Old Bytecode Instrumentation Libraries](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.12-old-bytecode-instrumentation.md)
 
 ## What this test does — and how it approximates the real failure
 

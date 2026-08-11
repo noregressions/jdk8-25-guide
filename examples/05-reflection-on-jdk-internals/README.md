@@ -1,12 +1,6 @@
 # 05 — Reflection on JDK internals
 
-| | |
-|---|---|
-| **Category** | Crashes at Runtime |
-| **Introduced** | JDK 16 (JEP 396) strong encapsulation by default; JDK 17 (JEP 403) permanent |
-| **Throws** | `InaccessibleObjectException` |
-| **Detect** | `jdeps --jdk-internals`; `-Xlog:exceptions=info` (catches instances frameworks swallow) |
-| **Fix** | Update the framework past the version doing illegal reflective access, or add a targeted `--add-opens` with a tracking issue and a removal date. |
+**Full details:** [Chapter 3.5 — Reflection on JDK Internals](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.05-reflection-on-jdk-internals.md)
 
 ## What this test does
 

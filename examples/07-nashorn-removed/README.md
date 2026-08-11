@@ -1,12 +1,6 @@
 # 07 — Nashorn JavaScript engine removed
 
-| | |
-|---|---|
-| **Category** | Crashes at Runtime |
-| **Introduced** | JDK 15 (JEP 372) |
-| **Throws** | `NullPointerException` — *not* the exception you'd expect. `getEngineByName("nashorn")` returns `null`, not a thrown error |
-| **Detect** | Search for `getEngineByName("nashorn")` / `getEngineByName("js")` |
-| **Fix** | GraalJS as a drop-in replacement dependency; check `ScriptEngine` compatibility-mode config. |
+**Full details:** [Chapter 3.7 — Nashorn JavaScript Engine Removed](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.07-nashorn-removed.md)
 
 ## What this test does
 

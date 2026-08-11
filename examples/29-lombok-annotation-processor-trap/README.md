@@ -1,12 +1,6 @@
 # 29 — The Lombok trap
 
-| | |
-|---|---|
-| **Category** | Recompilation Surprises |
-| **Introduced** | ⚠ JDK 23 — no dedicated JEP; `javac`'s implicit annotation-processor discovery disabled by default (a compiler behaviour change) |
-| **Symptom** | Build "succeeds"; Lombok-generated getters/setters/builders are silently absent; `NoSuchMethodError` at runtime |
-| **Detect** | Check Lombok version; verify the annotation processor is explicitly configured (`annotationProcessorPaths` in Maven, `annotationProcessor` in Gradle) |
-| **Fix** | Lombok **1.18.42+** for JDK 25 class-file support *and* explicit processor configuration — updating the version alone is not sufficient. |
+**Full details:** [Chapter 3.29 — The Lombok Trap](https://github.com/noregressions/jdk8-25-guide/blob/main/src/main/paperband/03.29-lombok-trap.md)
 
 ## What this test does — real Lombok, not a simulation
 
