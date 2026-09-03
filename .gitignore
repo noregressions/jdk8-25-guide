@@ -1,0 +1,46 @@
+# --- Java build output ---------------------------------------------------------
+*.class
+*.jar
+
+# Output directories the example run.sh scripts compile into
+out/
+out[0-9]*/
+out8/
+out25/
+out-*/
+outA/
+outB/
+outT/
+old_out/
+new_out/
+target/
+
+# --- Example run artifacts -----------------------------------------------------
+*.jfr
+*.ser
+*.log
+gclogs/
+out.txt
+
+# --- Local toolchain (machine-specific JDK paths / downloaded JDKs) -------------
+.jdks/
+
+# --- Keys, keystores, certs ----------------------------------------------------
+*.jks
+*.p12
+*.keystore
+
+# --- IDEs ----------------------------------------------------------------------
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+
+# --- OS noise ------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+Desktop.ini
